@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import Ionicons from '@expo/vector-icons/Ionicons';
+import FirstScreen from './src/components/screens/Getting Started';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <FirstScreen />
     </View>
   );
 }
@@ -13,8 +13,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#030335',
     alignItems: 'center',
     justifyContent: 'center',
+    // borderColor:'red',
+    // borderWidth:1
   },
 });
