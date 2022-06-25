@@ -25,10 +25,10 @@ const Update = () => {
     const getWeatherUpdate = async () => {
       try {
         const response = await fetch(
-          "http://api.weatherstack.com/current?access_key=2522de2371afeaa244bce806a9c64e0b&query=" +
+          "http://api.weatherstack.com/current?access_key=&query=" +
             regName[0].city
         );
-        // console.log("http://api.weatherstack.com/current?access_key=2522de2371afeaa244bce806a9c64e0b&query="+regName[0].city);
+        // console.log("http://api.weatherstack.com/current?access_key=&query="+regName[0].city);
         const json = await response.json();
         setData(json.current);
         console.log(data);
@@ -38,7 +38,7 @@ const Update = () => {
         setLoading(false);
       }
     };
-    // console.log("http://api.weatherstack.com/current?access_key=2522de2371afeaa244bce806a9c64e0b&query=" +regName[0].city);
+    // console.log("http://api.weatherstack.com/current?access_key=&query=" +regName[0].city);
     useEffect(() => {
       var day1 = "";
       var month1 = "";
@@ -93,7 +93,7 @@ const Update = () => {
           setErrorMsg("Permission to access location was denied");
           return;
         }
-        let apikey = "AIzaSyCawxqQ41XGJFeTnto7V0K9LzCKSisy4T8";
+        let apikey = "Enter API KEY";
         Location.setGoogleApiKey(apikey);
   
         let location = await Location.getCurrentPositionAsync();
