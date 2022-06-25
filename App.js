@@ -2,10 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import FirstScreen from './src/components/screens/Getting Started';
+import Weather from './src/components/screens/Main Layout';
 export default function App() {
   return (
     <View style={styles.container}>
-      <FirstScreen />
+      {/* <FirstScreen /> */}
+      <Weather />
     </View>
   );
 }
